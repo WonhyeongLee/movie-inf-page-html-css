@@ -1,0 +1,139 @@
+//색상
+$cont-main: #F2F2F2;
+$nav-list: #828282;
+$black: #222;
+//폰트
+$base-font: 'Noto Sans KR', sans-serif;
+$head-font: 'Roboto', 'Noto Sans KR';
+
+@mixin blind {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+// 인수 기본값 줄 때 하나라도 없으면 에러뜸
+@mixin font($family: $base-font, $style: normal, $weight: null, $size: null, $lh: 19px) {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lh;
+}
+
+#app{
+    // @include font($weight: 700, $size: 16px,$lh: 18px);
+    max-width: 1060px;
+    background-color: #F2F2F2;
+    border: 2px solid #bdbdbd;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: 86px auto 135px;
+    padding: 41px 28px 31px 27px;
+    .wrap-header{
+        text-align: center;
+        .tit-head{
+            @include font($family:$head-font,$weight:700,$size:24px,$lh:28px);
+        }
+        .line-header{
+            color: #bdbdbd;
+            margin: 37px auto 28px;
+            width: 65%;
+        }
+    }
+}
+.nav-header{
+
+    .list-nav{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        color: #828282;
+        @include font($family:$base-font, $weight:500, $size:16px);
+        li:nth-child(1){
+            color: black;
+            @include font($family:$head-font, $weight:900, $size:16px);
+        }
+    }
+}
+
+.cont-movies{
+    max-width: 1003px;
+    margin-top: 28px;
+    box-sizing: border-box;
+    padding: 26px 24px 30px;
+    border: 2px solid #bdbdbd;
+    background-color: #FFF;
+    border-radius: 15px;
+    .list-movies{
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: space-between;
+        gap: 23px;
+        li{
+            width: 220px;
+            height: 441px;
+            border: 1px solid #BDBDBD;
+            box-sizing: border-box;
+            filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+            border-radius: 10px;
+            &:nth-child(n+5){
+                margin-top: 1px;
+            }
+        }
+    }
+}
+
+.wrap-footer{
+    margin: 0 auto;
+    inset: 0;
+    background-color: #f2f2f2;
+}
+
+// 정글 시네마 영화 목록
+// font-family: 'Roboto';
+// font-style: normal;
+// font-weight: 700;
+// font-size: 24px;
+// line-height: 28px;
+// text-align: center;
+
+// 현재상영영화 (nav select 된 목차)
+// font-family: 'Roboto';
+// font-style: normal;
+// font-weight: 900;
+// font-size: 16px;
+// line-height: 19px;
+
+// nav select 안된 목차 폰트
+// font-family: 'Roboto';
+// font-style: normal;
+// font-weight: 500;
+// font-size: 16px;
+// line-height: 19px;
+
+// 영화제목
+// font-family: 'Noto Sans KR';
+// font-style: normal;
+// font-weight: 900;
+// font-size: 16px;
+// line-height: 23px;
+
+// 영화정보 
+// font-family: 'Noto Sans KR';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 13px;
+// line-height: 19px;
+// text-align: center;
+
+// 영화 설명
+// font-family: 'Noto Sans KR';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 13px;
+// line-height: 19px;
+

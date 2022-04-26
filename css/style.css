@@ -1,0 +1,95 @@
+#app {
+  max-width: 1060px;
+  background-color: #F2F2F2;
+  border: 2px solid #bdbdbd;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 15px;
+  margin: 86px auto 135px;
+  padding: 41px 28px 31px 27px;
+}
+
+#app .wrap-header {
+  text-align: center;
+}
+
+#app .wrap-header .tit-head {
+  font-family: "Roboto", "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+#app .wrap-header .line-header {
+  color: #bdbdbd;
+  margin: 37px auto 28px;
+  width: 65%;
+}
+
+.nav-header .list-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+  color: #828282;
+  font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.nav-header .list-nav li:nth-child(1) {
+  color: black;
+  font-family: "Roboto", "Noto Sans KR";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.cont-movies {
+  max-width: 1003px;
+  margin-top: 28px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 26px 24px 30px;
+  border: 2px solid #bdbdbd;
+  background-color: #FFF;
+  border-radius: 15px;
+}
+
+.cont-movies .list-movies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 23px;
+}
+
+.cont-movies .list-movies li {
+  width: 220px;
+  height: 441px;
+  border: 1px solid #BDBDBD;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+  border-radius: 10px;
+}
+
+.cont-movies .list-movies li:nth-child(n+5) {
+  margin-top: 1px;
+}
+
+.wrap-footer {
+  margin: 0 auto;
+  inset: 0;
+  background-color: #f2f2f2;
+}
+/*# sourceMappingURL=style.css.map */
