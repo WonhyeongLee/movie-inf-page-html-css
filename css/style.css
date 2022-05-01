@@ -73,7 +73,9 @@
 }
 
 .cont-movies .list-movies li {
+  position: relative;
   width: 220px;
+  padding: 19px 20px;
   height: 441px;
   border: 1px solid #BDBDBD;
   -webkit-box-sizing: border-box;
@@ -85,6 +87,18 @@
 
 .cont-movies .list-movies li:nth-child(n+5) {
   margin-top: 1px;
+}
+
+button .btn-ticketing {
+  left: 0;
+  border: 1px solid blue;
+}
+
+button .btn-preview {
+  width: 200px;
+  right: 0;
+  border: 1px solid red;
+  background-color: red;
 }
 
 .wrap-footer {

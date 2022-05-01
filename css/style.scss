@@ -74,7 +74,9 @@ $head-font: 'Roboto', 'Noto Sans KR';
         // justify-content: space-between;
         gap: 23px;
         li{
+            position: relative;
             width: 220px;
+            padding: 19px 20px;
             height: 441px;
             border: 1px solid #BDBDBD;
             box-sizing: border-box;
@@ -86,7 +88,18 @@ $head-font: 'Roboto', 'Noto Sans KR';
         }
     }
 }
-
+button{
+    .btn-ticketing{
+        left: 0;
+        border: 1px solid blue;
+    }
+    .btn-preview{
+        width: 200px;
+        right: 0;
+        border: 1px solid red;
+        background-color: red;
+    }
+}
 .wrap-footer{
     margin: 0 auto;
     inset: 0;
