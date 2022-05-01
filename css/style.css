@@ -74,6 +74,7 @@
 
 .cont-movies .list-movies li {
   position: relative;
+  overflow: hidden;
   width: 220px;
   padding: 19px 20px;
   height: 441px;
@@ -90,25 +91,22 @@
 }
 
 button {
-  position: relative;
+  position: absolute;
   width: 110px;
-  padding: 9px 27px 12px;
+  padding: 9px 0 12px;
+  overflow: hidden;
 }
 
 button.btn-ticketing {
-  position: absolute;
   left: 0;
   bottom: 0;
   background-color: aquamarine;
-  border-radius: 0 0 0 15px;
 }
 
 button.btn-preview {
-  position: absolute;
   right: 0;
   bottom: 0;
   background-color: red;
-  border-radius: 0 0 15px 0;
 }
 
 .wrap-footer {
