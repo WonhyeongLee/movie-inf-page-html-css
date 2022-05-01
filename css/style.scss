@@ -89,15 +89,22 @@ $head-font: 'Roboto', 'Noto Sans KR';
     }
 }
 button{
-    .btn-ticketing{
+    position: relative;
+    width: 110px;
+    padding: 9px 27px 12px;
+    &.btn-ticketing{
+        position: absolute;
         left: 0;
-        border: 1px solid blue;
+        bottom: 0;
+        background-color: aquamarine;
+        border-radius: 0 0 0 15px;
     }
-    .btn-preview{
-        width: 200px;
+    &.btn-preview{
+        position: absolute;
         right: 0;
-        border: 1px solid red;
+        bottom: 0;
         background-color: red;
+        border-radius: 0 0 15px 0;
     }
 }
 .wrap-footer{

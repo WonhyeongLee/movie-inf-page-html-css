@@ -89,16 +89,26 @@
   margin-top: 1px;
 }
 
-button .btn-ticketing {
-  left: 0;
-  border: 1px solid blue;
+button {
+  position: relative;
+  width: 110px;
+  padding: 9px 27px 12px;
 }
 
-button .btn-preview {
-  width: 200px;
+button.btn-ticketing {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: aquamarine;
+  border-radius: 0 0 0 15px;
+}
+
+button.btn-preview {
+  position: absolute;
   right: 0;
-  border: 1px solid red;
+  bottom: 0;
   background-color: red;
+  border-radius: 0 0 15px 0;
 }
 
 .wrap-footer {
