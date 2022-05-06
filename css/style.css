@@ -90,7 +90,7 @@
 }
 
 .cont-item {
-  padding: 18px 20px;
+  padding: 20px 20px;
 }
 
 .cont-item h2 {
@@ -115,22 +115,33 @@
 }
 
 .cont-item .div-movieinfo {
-  margin-bottom: 18px;
-}
-
-.cont-item .div-movieinfo strong {
-  color: #828282;
   font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
-  line-height: 19px;
+  line-height: 22px;
+}
+
+.cont-item .div-movieinfo strong {
+  color: #828282;
+}
+
+.cont-item .div-movieinfo span {
+  color: #000000;
+}
+
+.cont-item .div-movieinfo span:nth-of-type(1) {
+  margin-right: 42px;
+}
+
+.cont-item .div-movieinfo span:nth-of-type(3) {
+  margin-right: 80px;
 }
 
 button {
   position: absolute;
   width: 110px;
-  padding: 9px 0 12px;
+  padding: 13px 0 12px;
   overflow: hidden;
 }
 

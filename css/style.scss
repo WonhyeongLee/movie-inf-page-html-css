@@ -89,7 +89,7 @@ $head-font: 'Roboto', 'Noto Sans KR';
     }
 }
 .cont-item{
-    padding: 18px 20px;
+    padding: 20px 20px;
     h2{
         @include font($family:$base-font, $weight:900, $size:16px, $lh:23px);
         letter-spacing: -1px;
@@ -104,17 +104,25 @@ $head-font: 'Roboto', 'Noto Sans KR';
         }
     }
     .div-movieinfo{
-        margin-bottom: 18px;
+        @include font($family:$base-font, $weight:400, $size:13px, $lh:22px);
         strong{
             color: #828282;
-            @include font($family:$base-font, $weight:400, $size:13px, $lh:19px);
+        }
+        span{
+            color: #000000;
+            &:nth-of-type(1){
+                margin-right: 42px;
+            }
+            &:nth-of-type(3){
+                margin-right: 80px;
+            }
         }
     }
 }
 button{
     position: absolute;
     width: 110px;
-    padding: 9px 0 12px;
+    padding: 13px 0 12px;
     overflow: hidden;
     &.btn-ticketing{
         left: 0;
