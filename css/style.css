@@ -52,7 +52,7 @@
   line-height: 19px;
 }
 
-.cont-movies {
+.wrap-content {
   max-width: 1003px;
   margin-top: 28px;
   -webkit-box-sizing: border-box;
@@ -63,7 +63,7 @@
   border-radius: 15px;
 }
 
-.cont-movies .list-movies {
+.wrap-content .list-movies {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,11 +72,10 @@
   gap: 23px;
 }
 
-.cont-movies .list-movies li {
+.wrap-content .list-movies li {
   position: relative;
   overflow: hidden;
   width: 220px;
-  padding: 19px 20px;
   height: 441px;
   border: 1px solid #BDBDBD;
   -webkit-box-sizing: border-box;
@@ -86,8 +85,46 @@
   border-radius: 10px;
 }
 
-.cont-movies .list-movies li:nth-child(n+5) {
+.wrap-content .list-movies li:nth-child(n+5) {
   margin-top: 1px;
+}
+
+.cont-item {
+  padding: 18px 20px;
+}
+
+.cont-item h2 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: -1px;
+  margin: 11px 0 12px;
+}
+
+.cont-item .wrap-img {
+  height: 250px;
+}
+
+.cont-item .wrap-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cont-item .div-movieinfo {
+  margin-bottom: 18px;
+}
+
+.cont-item .div-movieinfo strong {
+  color: #828282;
+  font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
 }
 
 button {
