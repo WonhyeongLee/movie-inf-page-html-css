@@ -25,7 +25,6 @@ $head-font: 'Roboto', 'Noto Sans KR';
 }
 
 #app{
-    // @include font($weight: 700, $size: 16px,$lh: 18px);
     max-width: 1060px;
     background-color: #F2F2F2;
     border: 2px solid #bdbdbd;
@@ -46,7 +45,6 @@ $head-font: 'Roboto', 'Noto Sans KR';
     }
 }
 .nav-header{
-
     .list-nav{
         display: flex;
         justify-content: center;
@@ -59,7 +57,6 @@ $head-font: 'Roboto', 'Noto Sans KR';
         }
     }
 }
-
 .wrap-content{
     max-width: 1003px;
     margin-top: 28px;
@@ -71,16 +68,17 @@ $head-font: 'Roboto', 'Noto Sans KR';
     .list-movies{
         display: flex;
         flex-wrap: wrap;
-        // justify-content: space-between;
         gap: 23px;
         li{
+            // filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 1px 4px 0px, rgba(14, 30, 37, 0.32) 0px 1px 4px 0px;
+            // filter: drop-shadow 를 쓰면 자식요소까지 다 적용돼서 box-shadow 써야했다
             position: relative;
             overflow: hidden;
             width: 220px;
             height: 441px;
             border: 1px solid #BDBDBD;
             box-sizing: border-box;
-            filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
             border-radius: 10px;
             &:nth-child(n+5){
                 margin-top: 1px;
@@ -89,6 +87,7 @@ $head-font: 'Roboto', 'Noto Sans KR';
     }
 }
 .cont-item{
+    box-shadow: none;
     padding: 20px 20px;
     h2{
         @include font($family:$base-font, $weight:900, $size:16px, $lh:23px);
@@ -97,6 +96,7 @@ $head-font: 'Roboto', 'Noto Sans KR';
     }
     .wrap-img{
         height: 250px;
+        filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
         img{
             width: 100%;
             height: 100%;
@@ -111,7 +111,16 @@ $head-font: 'Roboto', 'Noto Sans KR';
         span{
             color: #000000;
             &:nth-of-type(1){
-                margin-right: 42px;
+                margin-right: 27px;
+            }
+            &:nth-of-type(2)::before{
+                content: '';
+                background: url('../images/icon/별점이미지.png') no-repeat;
+                background-size: contain;
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                margin: -2px 3px;
             }
             &:nth-of-type(3){
                 margin-right: 80px;

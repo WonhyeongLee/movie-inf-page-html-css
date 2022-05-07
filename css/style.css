@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #app {
   max-width: 1060px;
   background-color: #F2F2F2;
@@ -73,6 +74,8 @@
 }
 
 .wrap-content .list-movies li {
+  -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 1px 4px 0px, rgba(14, 30, 37, 0.32) 0px 1px 4px 0px;
+          box-shadow: rgba(14, 30, 37, 0.12) 0px 1px 4px 0px, rgba(14, 30, 37, 0.32) 0px 1px 4px 0px;
   position: relative;
   overflow: hidden;
   width: 220px;
@@ -80,8 +83,6 @@
   border: 1px solid #BDBDBD;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
-          filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
   border-radius: 10px;
 }
 
@@ -90,6 +91,8 @@
 }
 
 .cont-item {
+  -webkit-box-shadow: none;
+          box-shadow: none;
   padding: 20px 20px;
 }
 
@@ -105,6 +108,8 @@
 
 .cont-item .wrap-img {
   height: 250px;
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
 }
 
 .cont-item .wrap-img img {
@@ -131,7 +136,17 @@
 }
 
 .cont-item .div-movieinfo span:nth-of-type(1) {
-  margin-right: 42px;
+  margin-right: 27px;
+}
+
+.cont-item .div-movieinfo span:nth-of-type(2)::before {
+  content: '';
+  background: url("../images/icon/별점이미지.png") no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: -2px 3px;
 }
 
 .cont-item .div-movieinfo span:nth-of-type(3) {
