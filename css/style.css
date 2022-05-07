@@ -172,9 +172,51 @@ button.btn-preview {
   background-color: red;
 }
 
-.wrap-footer {
+.footer {
   margin: 0 auto;
-  inset: 0;
+  height: 213px;
   background-color: #f2f2f2;
+  padding: 53px 0 38px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrap-footer {
+  position: relative;
+  width: 1190px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.wrap-footer h1 {
+  float: left;
+}
+
+.wrap-footer .cont-sns {
+  float: right;
+}
+
+.wrap-footer hr {
+  margin: 42px 0 36px;
+  width: 100%;
+}
+
+.wrap-footer dl, .wrap-footer dt {
+  font-weight: 700;
+}
+
+.wrap-footer dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrap-footer dl dt {
+  margin-left: 10px;
+}
+
+.wrap-footer dl dd {
+  margin-left: 5px;
+  font-weight: 400;
 }
 /*# sourceMappingURL=style.css.map */

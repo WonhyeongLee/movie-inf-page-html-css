@@ -144,10 +144,41 @@ button{
         background-color: red;
     }
 }
-.wrap-footer{
+.footer{
     margin: 0 auto;
-    inset: 0;
+    height: 213px;
     background-color: #f2f2f2;
+    padding: 53px 0 38px;
+    box-sizing: border-box;
+}
+.wrap-footer{
+    position: relative;
+    width: 1190px;
+    margin: 0 auto;
+    overflow: hidden;
+    h1{
+        float: left;
+    }
+    .cont-sns{
+        float: right;
+    }
+    hr{
+        margin: 42px 0 36px;
+        width: 100%;
+    }
+    dl,dt{
+        font-weight: 700;
+    }
+    dl{
+        display: flex;
+        dt{
+            margin-left: 10px;
+        }
+        dd{
+            margin-left: 5px;
+            font-weight: 400;
+        }
+    }
 }
 
 // 정글 시네마 영화 목록
