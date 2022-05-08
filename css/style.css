@@ -1,4 +1,11 @@
 @charset "UTF-8";
+/*반응형, 브라우저 크기가 1060px 이하일때*/
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 #app {
   max-width: 1060px;
   background-color: #F2F2F2;
@@ -36,21 +43,19 @@
       -ms-flex-pack: center;
           justify-content: center;
   gap: 30px;
-  color: #828282;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Roboto", "Noto Sans KR";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  pointer-events: none;
+  cursor: default;
+  color: #828282;
 }
 
 .nav-header .list-nav li:nth-child(1) {
   color: black;
-  font-family: "Roboto", "Noto Sans KR";
-  font-style: normal;
   font-weight: 900;
-  font-size: 16px;
-  line-height: 19px;
 }
 
 .wrap-content {
@@ -74,13 +79,13 @@
 }
 
 .wrap-content .list-movies li {
-  -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 1px 4px 0px, rgba(14, 30, 37, 0.32) 0px 1px 4px 0px;
-          box-shadow: rgba(14, 30, 37, 0.12) 0px 1px 4px 0px, rgba(14, 30, 37, 0.32) 0px 1px 4px 0px;
+  -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 1px 3px 0px, rgba(14, 30, 37, 0.32) 0px 1px 3px 0px;
+          box-shadow: rgba(14, 30, 37, 0.12) 0px 1px 3px 0px, rgba(14, 30, 37, 0.32) 0px 1px 3px 0px;
   position: relative;
   overflow: hidden;
   width: 220px;
   height: 441px;
-  border: 1px solid #BDBDBD;
+  border: 1px solid #bdbdbd;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 10px;
@@ -90,9 +95,21 @@
   margin-top: 1px;
 }
 
+@media (max-width: 1060px) {
+  .wrap-content .list-movies {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer .wrap-footer {
+    width: 920px;
+  }
+  .footer .wrap-footer .line-header {
+    margin: 44px 0 20px;
+  }
+}
+
 .cont-item {
-  -webkit-box-shadow: none;
-          box-shadow: none;
   padding: 20px 20px;
 }
 
@@ -117,9 +134,12 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 10px;
 }
 
 .cont-item .div-movieinfo {
+  width: 100%;
+  overflow: hidden;
   font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -127,55 +147,72 @@
   line-height: 22px;
 }
 
-.cont-item .div-movieinfo strong {
-  color: #828282;
+.cont-item .div-movieinfo .div-genre {
+  float: left;
 }
 
-.cont-item .div-movieinfo span {
-  color: #000000;
+.cont-item .div-movieinfo .div-score {
+  white-space: nowrap;
+  float: right;
 }
 
-.cont-item .div-movieinfo span:nth-of-type(1) {
-  margin-right: 27px;
-}
-
-.cont-item .div-movieinfo span:nth-of-type(2)::before {
+.cont-item .div-movieinfo .div-score span::before {
   content: '';
   background: url("../images/icon/별점이미지.png") no-repeat;
   background-size: contain;
   display: inline-block;
   width: 14px;
   height: 14px;
-  margin: -2px 3px;
+  margin: -2px 2px;
 }
 
-.cont-item .div-movieinfo span:nth-of-type(3) {
-  margin-right: 80px;
+.cont-item .div-movieinfo .div-open {
+  float: left;
+}
+
+.cont-item .div-movieinfo .div-casting {
+  float: left;
+}
+
+.cont-item .div-movieinfo strong {
+  color: #828282;
 }
 
 button {
   position: absolute;
-  width: 110px;
+  width: 111px;
   padding: 13px 0 12px;
-  overflow: hidden;
+  background-color: #F2F2F2;
+  border: 1px solid #bdbdbd;
 }
 
 button.btn-ticketing {
-  left: 0;
-  bottom: 0;
-  background-color: aquamarine;
+  left: -1px;
+  bottom: -1px;
+  border-radius: 0 0 0 10px;
 }
 
 button.btn-preview {
-  right: 0;
-  bottom: 0;
-  background-color: red;
+  right: -1px;
+  bottom: -1px;
+  border-radius: 0 0 10px 0;
+}
+
+button.btn-preview::before {
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/icon/아이콘_재생.png);
+  background-size: cover;
+  margin-right: 3px;
+  vertical-align: bottom;
 }
 
 .footer {
   margin: 0 auto;
   height: 213px;
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   padding: 53px 0 38px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -222,6 +259,7 @@ button.btn-preview {
 }
 
 .wrap-footer dl {
+  color: #343434;
   line-height: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -231,7 +269,7 @@ button.btn-preview {
 .wrap-footer dl dt {
   font-weight: 700;
   margin-left: 10px;
-  color: #4F4F4F;
+  color: #343434;
 }
 
 .wrap-footer dl dt::before {

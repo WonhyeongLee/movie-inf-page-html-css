@@ -1,0 +1,35 @@
+//색상
+$gray1: #F2F2F2;
+$gray2: #828282;
+$border-gray: #bdbdbd;
+$black: #222;
+//폰트
+$base-font: 'Noto Sans KR', sans-serif;
+$head-font: 'Roboto', 'Noto Sans KR';
+
+$tablet: 1060px;
+
+/*반응형, 브라우저 크기가 1060px 이하일때*/
+@mixin tablet{
+    @media (max-width: $tablet){ 
+        @content;
+    }
+} 
+// IR 
+@mixin blind {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+// 폰트설정
+// 인수 기본값 줄 때 하나라도 없으면 에러뜸
+@mixin font($family: $base-font, $style: normal, $weight: null, $size: null, $lh: 19px) {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lh;
+}

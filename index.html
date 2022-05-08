@@ -12,6 +12,10 @@ Sass 사용
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>영화목록페이지</title>
     <script src="https://kit.fontawesome.com/dd463c3c0b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -37,14 +41,22 @@ Sass 사용
                         </div>
                         <h2>위니브 월드 : 새로운 시대</h2>
                         <div class="div-movieinfo">
-                            <strong>개요</strong>
-                            <span>판타지</span>
-                            <strong>평점</strong>
-                            <span>9.05</span>
-                            <strong>개봉</strong>
-                            <span>2021.03.27</span>
-                            <strong>출연</strong>
-                            <span>라이캣,소울곰,개리씨</span>
+                            <div class="div-genre">
+                                <strong>개요</strong>
+                                <span>판타지</span>
+                            </div>
+                            <div class="div-score">
+                                <strong>평점</strong>
+                                <span>9.05</span>
+                            </div>
+                            <div class="div-open">
+                                <strong>개봉</strong>
+                                <span>2021.03.27</span>
+                            </div>
+                            <div class="div-casting">
+                                <strong>출연</strong>
+                                <span>라이캣,소울곰,개리씨</span>
+                            </div>
                         </div>
                     <button class="btn-ticketing">예매하기</button>
                     <button class="btn-preview">예고편</button>
@@ -55,27 +67,197 @@ Sass 사용
                         <div class="wrap-img">
                             <img src="./images/포스터_눈떠보니자바.png">
                         </div>
-                        <h2>눈떠보니 코딩테스트 전...</h2>
+                        <h2 class="ellipsis">눈떠보니 코딩테스트 전날 with 자바</h2>
                         <div class="div-movieinfo">
-                            <strong>개요</strong>
-                            <span>스릴러</span>
-                            <strong>평점</strong>
-                            <span>8.25</span>
-                            <strong>개봉</strong>
-                            <span>2021.04.01</span>
-                            <strong>출연</strong>
-                            <span>자바독,개리씨,빙키</span>
+                            <div class="div-genre">
+                                <strong>개요</strong>
+                                <span>스릴러</span>
+                            </div>
+                            <div class="div-score">
+                                <strong>평점</strong>
+                                <span>8.25</span>
+                            </div>
+                            <div class="div-open">
+                                <strong>개봉</strong>
+                                <span>2021.04.01</span>
+                            </div>
+                            <div class="div-casting">
+                                <strong>출연</strong>
+                                <span>자바독,개리씨,빙키</span>
+                            </div>
                         </div>
                     <button class="btn-ticketing">예매하기</button>
                     <button class="btn-preview">예고편</button>
                     </section>
                 </li>
-                <li>1</li>
-                <li>1</li>
-                <li>2</li>
-                <li>2</li>
-                <li>2</li>
-                <li>2</li>
+                <li>
+                    <section class="cont-item">
+                        <div class="wrap-img">
+                            <img src="./images/포스터_부트캠프.jpg">
+                        </div>
+                        <h2 class="ellipsis">파이썬 부트캠프</h2>
+                        <div class="div-movieinfo">
+                            <div class="div-genre">
+                                <strong>개요</strong>
+                                <span>드라마</span>
+                            </div>
+                            <div class="div-score">
+                                <strong>평점</strong>
+                                <span>8.77</span>
+                            </div>
+                            <div class="div-open">
+                                <strong>개봉</strong>
+                                <span>2021.04.12</span>
+                            </div>
+                            <div class="div-casting">
+                                <strong>출연</strong>
+                                <span>캣,파이,썬,뮤라</span>
+                            </div>
+                        </div>
+                    <button class="btn-ticketing">예매하기</button>
+                    <button class="btn-preview">예고편</button>
+                    </section>
+                </li>
+                <li>
+                    <section class="cont-item">
+                        <div class="wrap-img">
+                            <img src="./images/포스터_파이큐티.png">
+                        </div>
+                        <h2>파이큐티의 사랑</h2>
+                        <div class="div-movieinfo">
+                            <div class="div-genre">
+                                <strong>개요</strong>
+                                <span>로맨스</span>
+                            </div>
+                            <div class="div-score">
+                                <strong>평점</strong>
+                                <span>8.81</span>
+                            </div>
+                            <div class="div-open">
+                                <strong>개봉</strong>
+                                <span>2021.04.08</span>
+                            </div>
+                            <div class="div-casting">
+                                <strong>출연</strong>
+                                <span>파이썬,큐티</span>
+                            </div>
+                        </div>
+                    <button class="btn-ticketing">예매하기</button>
+                    <button class="btn-preview">예고편</button>
+                    </section>
+                </li>
+                <li>
+                    <section class="cont-item">
+                        <div class="wrap-img">
+                            <img src="./images/포스터_앤진액스.png">
+                        </div>
+                        <h2>NGINX의 춤</h2>
+                        <div class="div-movieinfo">
+                            <div class="div-genre">
+                                <strong>개요</strong>
+                                <span>드라마</span>
+                            </div>
+                            <div class="div-score">
+                                <strong>평점</strong>
+                                <span>9.88</span>
+                            </div>
+                            <div class="div-open">
+                                <strong>개봉</strong>
+                                <span>2021.04.15</span>
+                            </div>
+                            <div class="div-casting">
+                                <strong>출연</strong>
+                                <span>NGINX,노션</span>
+                            </div>
+                        </div>
+                    <button class="btn-ticketing">예매하기</button>
+                    <button class="btn-preview">예고편</button>
+                    </section>
+                </li>
+                <li>
+                    <section class="cont-item">
+                        <div class="wrap-img">
+                            <img src="./images/포스터_어쩌다밋업.png">
+                        </div>
+                        <h2>어쩌다 밋업</h2>
+                        <div class="div-movieinfo">
+                            <div class="div-genre">
+                                <strong>개요</strong>
+                                <span>드라마</span>
+                            </div>
+                            <div class="div-score">
+                                <strong>평점</strong>
+                                <span>9.25</span>
+                            </div>
+                            <div class="div-open">
+                                <strong>개봉</strong>
+                                <span>2021.04.17</span>
+                            </div>
+                            <div class="div-casting">
+                                <strong>출연</strong>
+                                <span>라이캣,자바독,소울곰</span>
+                            </div>
+                        </div>
+                    <button class="btn-ticketing">예매하기</button>
+                    <button class="btn-preview">예고편</button>
+                    </section>
+                </li>
+                <li>
+                    <section class="cont-item">
+                        <div class="wrap-img">
+                            <img src="./images/포스터_파이게임.jpg">
+                        </div>
+                        <h2>파이게임 어드벤처</h2>
+                        <div class="div-movieinfo">
+                            <div class="div-genre">
+                                <strong>개요</strong>
+                                <span>판타지액션</span>
+                            </div>
+                            <div class="div-score">
+                                <strong>평점</strong>
+                                <span>9.05</span>
+                            </div>
+                            <div class="div-open">
+                                <strong>개봉</strong>
+                                <span>2021.03.27</span>
+                            </div>
+                            <div class="div-casting">
+                                <strong>출연</strong>
+                                <span>라이캣,소울곰,개리씨</span>
+                            </div>
+                        </div>
+                    <button class="btn-ticketing">예매하기</button>
+                    <button class="btn-preview">예고편</button>
+                    </section>
+                </li>
+                <li>
+                    <section class="cont-item">
+                        <div class="wrap-img">
+                            <img src="./images/포스터_MBIT.png">
+                        </div>
+                        <h2>MBIT는 내 운명</h2>
+                        <div class="div-movieinfo">
+                            <div class="div-genre">
+                                <strong>개요</strong>
+                                <span>로맨스</span>
+                            </div>
+                            <div class="div-score">
+                                <strong>평점</strong>
+                                <span>9.02</span>
+                            </div>
+                            <div class="div-open">
+                                <strong>개봉</strong>
+                                <span>2021.04.12</span>
+                            </div>
+                            <div class="div-casting">
+                                <strong>출연</strong>
+                                <span>라이캣,개리씨,자바독</span>
+                            </div>
+                        </div>
+                    <button class="btn-ticketing">예매하기</button>
+                    <button class="btn-preview">예고편</button>
+                    </section>
+                </li>
             </ul>
         </div>
     </div>
