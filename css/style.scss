@@ -157,71 +157,69 @@ button{
     margin: 0 auto;
     overflow: hidden;
     h1{
+        @include font($family:$head-font,$weight:700,$size:22px,$lh:26px);
         float: left;
     }
-    .cont-sns{
+    .div-sns{
         float: right;
+        img{
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            &:nth-child(2){
+                margin: 0 10px;
+            }
+        }
     }
     hr{
-        margin: 42px 0 36px;
+        margin: 66px 0 36px;
         width: 100%;
     }
     dl,dt{
         font-weight: 700;
     }
     dl{
+        line-height: 20px;
         display: flex;
         dt{
+            font-weight: 700;
             margin-left: 10px;
+            color: #4F4F4F;
+            &::before{
+                display: block;
+                font-weight: 400;
+                content: "|";
+                color: #222;
+                float: left;
+                margin-top: -1px;
+                margin-right: 10px;
+            }
         }
+
         dd{
+            color: #393939;
             margin-left: 5px;
             font-weight: 400;
+            &:nth-of-type(3)::before{
+                display: block;
+                font-weight: 400;
+                content: "|";
+                color: #222;
+                float: left;
+                margin-top: -1px;
+                margin-left: 3px;
+                margin-right: 6px;
+            }
+        }
+    }
+    span{
+        @include font($family:$base-font,$weight:700,$size:14px,$lh:20px);
+        margin-left: auto;
+        &::before{
+            display: inline-block;
+            content: "\f1f9";
+            font-family: "Font Awesome\ 5 Free";
+            margin-right: 3px;
         }
     }
 }
-
-// 정글 시네마 영화 목록
-// font-family: 'Roboto';
-// font-style: normal;
-// font-weight: 700;
-// font-size: 24px;
-// line-height: 28px;
-// text-align: center;
-
-// 현재상영영화 (nav select 된 목차)
-// font-family: 'Roboto';
-// font-style: normal;
-// font-weight: 900;
-// font-size: 16px;
-// line-height: 19px;
-
-// nav select 안된 목차 폰트
-// font-family: 'Roboto';
-// font-style: normal;
-// font-weight: 500;
-// font-size: 16px;
-// line-height: 19px;
-
-// 영화제목
-// font-family: 'Noto Sans KR';
-// font-style: normal;
-// font-weight: 900;
-// font-size: 16px;
-// line-height: 23px;
-
-// 영화정보 
-// font-family: 'Noto Sans KR';
-// font-style: normal;
-// font-weight: 400;
-// font-size: 13px;
-// line-height: 19px;
-// text-align: center;
-
-// 영화 설명
-// font-family: 'Noto Sans KR';
-// font-style: normal;
-// font-weight: 400;
-// font-size: 13px;
-// line-height: 19px;
-
