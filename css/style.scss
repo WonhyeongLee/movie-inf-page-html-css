@@ -5,6 +5,24 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+@mixin clearFix(){
+    &:before,
+    &:after{
+        content: " "; 
+        display: table; 
+    }
+
+    &:after{
+        display: block;
+        clear: both;
+        height: 1px;
+        margin-top: -1px;
+        visibility: hidden;
+    }
+    &{
+      *zoom: 1;
+    }
+}
 
 #app{
     max-width: 1060px;
@@ -60,7 +78,6 @@
             position: relative;
             overflow: hidden;
             width: 220px;
-            height: 441px;
             border: 1px solid $border-gray;
             box-sizing: border-box;
             border-radius: 10px;
@@ -86,7 +103,7 @@
     }
 }
 .cont-item{
-    padding: 20px 20px;
+    padding: 20px 20px 63px;
     h2{
         @include font($family:$base-font, $weight:900, $size:16px, $lh:23px);
         letter-spacing: -1px;
@@ -103,8 +120,8 @@
         }
     }
     .div-movieinfo{
+        @include clearFix();
         width: 100%;
-        overflow: hidden;
         @include font($family:$base-font, $weight:400, $size:13px, $lh:22px);
         .div-genre{
             float: left;
@@ -229,7 +246,8 @@ button{
             }
         }
     }
-    span{
+    strong{
+        display: block;
         @include font($family:$base-font,$weight:700,$size:14px,$lh:20px);
         margin-left: auto;
         &::before{

@@ -84,7 +84,6 @@
   position: relative;
   overflow: hidden;
   width: 220px;
-  height: 441px;
   border: 1px solid #bdbdbd;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -110,7 +109,7 @@
 }
 
 .cont-item {
-  padding: 20px 20px;
+  padding: 20px 20px 63px;
 }
 
 .cont-item h2 {
@@ -139,12 +138,28 @@
 
 .cont-item .div-movieinfo {
   width: 100%;
-  overflow: hidden;
   font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
   line-height: 22px;
+}
+
+.cont-item .div-movieinfo:before, .cont-item .div-movieinfo:after {
+  content: " ";
+  display: table;
+}
+
+.cont-item .div-movieinfo:after {
+  display: block;
+  clear: both;
+  height: 1px;
+  margin-top: -1px;
+  visibility: hidden;
+}
+
+.cont-item .div-movieinfo {
+  *zoom: 1;
 }
 
 .cont-item .div-movieinfo .div-genre {
@@ -299,7 +314,8 @@ button.btn-preview::before {
   margin-right: 6px;
 }
 
-.wrap-footer span {
+.wrap-footer strong {
+  display: block;
   font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -308,7 +324,7 @@ button.btn-preview::before {
   margin-left: auto;
 }
 
-.wrap-footer span::before {
+.wrap-footer strong::before {
   display: inline-block;
   content: "\f1f9";
   font-family: "Font Awesome\ 5 Free";
